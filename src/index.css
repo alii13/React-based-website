@@ -18,7 +18,7 @@ p {
 
 a:hover {
   outline-width: 0;
-  padding-bottom: 3px !important;
+
   border-bottom: 2px solid #f36f21 !important;
 }
 hr {
@@ -184,16 +184,12 @@ a {
   .text-primary {
     font-size: 0.82em !important;
   }
-  .dabba {
-    height: 90vh !important;
-  }
+
   p {
     font-size: 0.9em !important;
   }
 }
-.dabba {
-  height: 100vh;
-}
+
 .padding {
   padding-top: 3em;
 }
@@ -208,10 +204,34 @@ a {
   border: 0;
 }
 .price-card {
-  height: 95vh;
   width: 90%;
   border-radius: 20px;
   box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.3);
+  padding: 1em 1em !important;
+}
+ul {
+  list-style-type: none;
+}
+li .right:before {
+  content: url(https://www.hostinger.in/assets/images/index-new/check-82319b207b.svg);
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+.pointer {
+  cursor: pointer;
+}
+li .partial-right:before {
+  content: url(https://www.hostinger.in/assets/images/index-new/check-limited-155f9db477.svg);
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+li .wrong:before {
+  content: url(https://www.hostinger.in/assets/images/index-new/cross-d173f88b62.svg);
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
 }
 input {
   border: 0;
@@ -259,8 +279,12 @@ input:focus {
   border-radius: 10px;
 }
 .active {
-  padding-bottom: 3px;
   border-bottom: 2px solid #f36f21;
+}
+.btn:active:focus,
+.btn:focus {
+  outline: 0 !important;
+  outline-offset: 0 !important;
 }
 a {
   text-decoration: none !important;
@@ -285,9 +309,7 @@ a {
     padding-right: 1.3em !important;
     padding-left: 0 !important;
   }
-  .price-card {
-    height: 100vh !important;
-  }
+
   .head {
     padding: 2em !important;
   }
@@ -315,6 +337,10 @@ a {
   }
   .see {
     display: block !important;
+  }
+  .shadow {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
   }
 }
 @media (max-width: 320px) {
@@ -346,6 +372,9 @@ a {
     padding: 1.4em 2em !important;
   }
 }
+a:hover {
+  padding-bottom: none !important;
+}
 .details input,
 select,
 textarea {
@@ -370,4 +399,13 @@ textarea {
 }
 .hover:hover {
   border-bottom: 0 !important;
+}
+.main {
+  overflow: hidden !important;
+  display: block !important;
+  position: relative !important;
+}
+.footer {
+  bottom: 0 !important;
+  width: 100% !important;
 }

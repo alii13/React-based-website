@@ -3,6 +3,8 @@ import Image4 from "../../Image4.png";
 import InputWithIcon from "./InputwithIcon";
 import Button from "../layout/Button";
 import OuterNavbar from "../layout/OuterNavbar";
+import Footer from "../layout/Footer";
+import InputField from "../layout/InputField";
 function SignUp() {
   return (
     <div>
@@ -26,15 +28,21 @@ function SignUp() {
               Welcome Back to Novus,Login to get a<br />
               beautiful website !{" "}
             </h2>
-            <div className="container d-flex justify-content-center">
-              <InputWithIcon link={"signin"} text={"Sign In"} />
-            </div>
+            <InputField id="emailsignup" type="email" label="Email" />
+            <InputField
+              id="confirmpassword"
+              type="password"
+              label="Confirm Password"
+            />
+            <InputField id="passwordsignup" type="password" label="Password" />
+            <InputField id="phone" type="text" label="Phone Number" />
             <div className="container d-flex justify-content-center pt-2">
               <Button line="Sign Up" />
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

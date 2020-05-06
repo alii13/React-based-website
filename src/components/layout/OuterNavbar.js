@@ -16,9 +16,10 @@ function OuterNavbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="#">
+        <NavLink className="navbar-brand hover" exact={true} to="/">
           Novus
-        </a>
+        </NavLink>
+        <Route exactpath="/" />
 
         <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
           <ul className="navbar-nav mt-lg-0">

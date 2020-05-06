@@ -7,12 +7,15 @@ import Section from "./Section";
 import Button from "./Button";
 import Navbar from "./Navbar";
 import { Link, animateScroll as scroll } from "react-scroll";
-//import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
+import Footer from "./Footer";
+import { NavLink, Route } from "react-router-dom";
 
 function Dashboard() {
   const section1heading = "Lorem Ipsum is simply dummy text of the printing";
   return (
     <div>
+      <ScrollToTop />
       <Navbar />
       <div className=" dashboard container-fluid ">
         <div className="row section-height">
@@ -72,7 +75,15 @@ function Dashboard() {
         content={section1heading}
       />
       <h4 className="pb-3">Lets Develop a beautiful website together !</h4>
-      <Button line={"Contact Us"} />
+
+      <NavLink className="hover" exact={true} to="/contact-us">
+        <div className="d-flex justify-content-center">
+          <Button line={"Contact Us"} />
+        </div>
+      </NavLink>
+      <Route exactpath="/contact-us" />
+
+      <Footer />
     </div>
   );
 }

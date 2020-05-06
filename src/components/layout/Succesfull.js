@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 import Counter from "./Countdown";
 import ScrollToTop from "./ScrollToTop";
 
-class Redirectx extends React.Component {
+class Succesfull extends React.Component {
   state = {
     redirect: false
   };
@@ -28,13 +28,12 @@ class Redirectx extends React.Component {
         <OuterNavbar />
         <div className="container padd">
           <div className="container">
-            <h2 className="coloring p-3"> Thank You !</h2>
+            <h2 className="coloring p-3"> Message Sent !</h2>
           </div>
           <div className="container">
             <p className="font-weight-light teext">
-              You will recieve a call from us within 12 hours,
-              <br />
-              thanks for your patience
+              Thanks for contacting us you will hear
+              <br /> from us shortly. Stay Tuned
             </p>
           </div>
         </div>
@@ -46,4 +45,4 @@ class Redirectx extends React.Component {
   }
 }
 
-export default Redirectx;
+export default Succesfull;

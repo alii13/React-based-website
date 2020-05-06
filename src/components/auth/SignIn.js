@@ -3,6 +3,7 @@ import Image4 from "../../Image4.png";
 import InputWithIcon from "./InputwithIcon";
 import Button from "../layout/Button";
 import OuterNavbar from "../layout/OuterNavbar";
+import Footer from "../layout/Footer";
 function SignIn() {
   return (
     <div>
@@ -36,6 +37,7 @@ function SignIn() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

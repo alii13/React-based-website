@@ -17,7 +17,7 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand hover" href="#">
           Novus
         </a>
 
@@ -28,7 +28,6 @@ function Navbar() {
                 Home
               </NavLink>
               <Route exactpath="/" />
-              <Route path="React-based-website/" />
             </li>
             <li className="nav-item">
               <Link

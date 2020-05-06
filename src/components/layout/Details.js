@@ -2,14 +2,17 @@ import React from "react";
 import OuterNavbar from "./OuterNavbar";
 import Button from "./Button";
 import { withRouter } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 class Details extends React.Component {
   submitForm(e) {
     e.preventDefault();
     this.props.history.push("/thank-you");
   }
+
   render() {
     return (
       <div>
+        <ScrollToTop />
         <OuterNavbar />
         <section>
           <div className="container p-3">

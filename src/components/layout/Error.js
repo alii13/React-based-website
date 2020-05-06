@@ -3,8 +3,9 @@ import OuterNavbar from "./OuterNavbar";
 import { Redirect } from "react-router-dom";
 import Counter from "./Countdown";
 import ScrollToTop from "./ScrollToTop";
+import Searching from "../../searching.svg";
 
-class Redirectx extends React.Component {
+class Error extends React.Component {
   state = {
     redirect: false
   };
@@ -28,15 +29,9 @@ class Redirectx extends React.Component {
         <OuterNavbar />
         <div className="container padd">
           <div className="container">
-            <h2 className="coloring p-3"> Thank You !</h2>
+            <embed src={Searching} style={{ height: "5em", width: "12em" }} />
           </div>
-          <div className="container">
-            <p className="font-weight-light teext">
-              You will recieve a call from us within 12 hours,
-              <br />
-              thanks for your patience
-            </p>
-          </div>
+          <h2 className="coloring p-3"> Sorry Page Not Found!</h2>
         </div>
         <div className="small">
           <Counter />
@@ -46,4 +41,4 @@ class Redirectx extends React.Component {
   }
 }
 
-export default Redirectx;
+export default Error;
