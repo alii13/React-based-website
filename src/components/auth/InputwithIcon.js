@@ -31,12 +31,12 @@ export default function InputWithIcons(props) {
       </div>
       <div class="helper d-flex justify-content-between">
         <div className="forgot">
-          <a href="#" className="text-primary">
+          <a href="#" className="text-primary hover">
             Forgot Password?
           </a>
         </div>
         <div className="signUp">
-          <NavLink to={LinkInter} className="text-primary">
+          <NavLink to={LinkInter} className="text-primary hover">
             {text}
           </NavLink>
           <Route path={LinkInter} />

@@ -1,9 +1,12 @@
 import React from "react";
 import Image4 from "../../Image4.png";
 import InputWithIcon from "./InputwithIcon";
+import Button from "../layout/Button";
+import OuterNavbar from "../layout/OuterNavbar";
 function SignUp() {
   return (
     <div>
+      <OuterNavbar />
       <div className="container dabba">
         <div className="row px">
           <div className="col-md-12 ">
@@ -25,6 +28,9 @@ function SignUp() {
             </h2>
             <div className="container d-flex justify-content-center">
               <InputWithIcon link={"signin"} text={"Sign In"} />
+            </div>
+            <div className="container d-flex justify-content-center pt-2">
+              <Button line="Sign Up" />
             </div>
           </div>
         </div>

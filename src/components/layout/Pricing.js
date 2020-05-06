@@ -2,12 +2,14 @@ import React from "react";
 import Image7 from "../../Image7.png";
 import Image6 from "../../Image6.png";
 import Image5 from "../../Image5.png";
-import { width } from "@material-ui/system";
 import Button from "./Button";
+import OuterNavbar from "./OuterNavbar";
+import { NavLink, Route } from "react-router-dom";
 
 function Pricing() {
   return (
     <div>
+      <OuterNavbar />
       <div className="container">
         <div className="container p-5 head">
           <h2>
@@ -32,7 +34,15 @@ function Pricing() {
                   <p className="feature">Feature 1</p>
                   <p className="feature">Feature 1</p>
                   <div className="container d-flex justify-content-center p-3">
-                    <Button line={"Choose"} />
+                    <NavLink
+                      activeClassName="active"
+                      exact={true}
+                      to="/pricing-details"
+                      className="hover"
+                    >
+                      <Button line={"Choose"} type={"submit"} />
+                    </NavLink>
+                    <Route exactpath="/pricing-details" />
                   </div>
                 </div>
               </div>
@@ -58,7 +68,15 @@ function Pricing() {
                   <p className="feature">Feature 1</p>
                   <p className="feature">Feature 1</p>
                   <div className="container d-flex justify-content-center p-3">
-                    <Button line={"Choose"} />
+                    <NavLink
+                      activeClassName="active"
+                      exact={true}
+                      to="/pricing-details"
+                      className="hover"
+                    >
+                      <Button line={"Choose"} type={"submit"} />
+                    </NavLink>
+                    <Route exactpath="/pricing-details" />
                   </div>
                 </div>
               </div>
@@ -81,7 +99,15 @@ function Pricing() {
                   <p className="feature">Feature 1</p>
                   <p className="feature">Feature 1</p>
                   <div className="container d-flex justify-content-center p-3">
-                    <Button line={"Choose"} />
+                    <NavLink
+                      activeClassName="active"
+                      exact={true}
+                      to="/pricing-details"
+                      className="hover"
+                    >
+                      <Button line={"Choose"} type={"submit"} />
+                    </NavLink>
+                    <Route exactpath="/pricing-details" />
                   </div>
                 </div>
               </div>

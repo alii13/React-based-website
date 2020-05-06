@@ -1,8 +1,7 @@
 import React from "react";
 import { NavLink, Route } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
 
-function Navbar() {
+function OuterNavbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,18 +30,10 @@ function Navbar() {
               <Route path="React-based-website/" />
             </li>
             <li className="nav-item">
-              <Link
-                activeClass="activex"
-                to="services"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <a href="services" className="activex">
-                  Services
-                </a>
-              </Link>
+              <NavLink activeClassName="active" exact={true} to="/">
+                Services
+              </NavLink>
+              <Route path="/" />
             </li>
             <li className="nav-item">
               <NavLink activeClassName="active" to="/pricing">
@@ -69,4 +60,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default OuterNavbar;

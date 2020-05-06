@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 import Icons from "./Icons";
 
 function Footer() {
@@ -16,16 +15,20 @@ function Footer() {
         <div className="row">
           <div className="col-md-12">
             <div className="row ">
-              <div className="col-md-5 col-xs-12 d-inline-flex flex-wrap justify-content-center add">
+              <div className="col-md-4 col-xs-12 d-inline-flex flex-wrap justify-content-center add">
                 <div className="link">Home</div>
                 <div className="link">Services</div>
                 <div className="link">Pricing</div>
                 <div className="link">Contact Us</div>
               </div>
-              <div className="col-md-3 p-0">
+              <div className="col-md-4 p-0">
                 <div className="">
                   <span className="d-flex justify-content-center add">
-                    <input className="input" />
+                    <input
+                      class="form-control input"
+                      type="text"
+                      placeholder="Message"
+                    />
                     <button
                       className="btn"
                       style={{

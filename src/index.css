@@ -4,6 +4,9 @@
   --darkcoloring: #000000;
   --size: 15px;
 }
+html {
+  scroll-behavior: smooth !important;
+}
 body {
   font-family: var(--font-name);
   font-size: var(--size);
@@ -13,6 +16,11 @@ p {
   color: rgb(68, 68, 68);
 }
 
+a:hover {
+  outline-width: 0;
+  padding-bottom: 3px !important;
+  border-bottom: 2px solid #f36f21 !important;
+}
 hr {
   margin-top: 7.5em;
 }
@@ -38,6 +46,9 @@ hr {
 }
 .signup {
   background-color: var(--coloring);
+}
+p {
+  font-family: "Rubik", sans-serif !important;
 }
 a {
   color: #000000 !important;
@@ -74,11 +85,40 @@ a {
   background-color: var(--coloring);
   font-size: var(--size);
 }
+
+@media (min-width: 768px) {
+  .btn {
+    width: 110px !important;
+    height: 38px !important;
+    border-radius: 11px;
+    font-size: 14px !important;
+  }
+  .signup {
+    width: 110px !important;
+    height: 38px !important;
+    border-radius: 11px;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 375px) {
+  .input {
+    max-width: 10em !important;
+  }
+}
+@media (min-width: 376px) {
+  .input {
+    max-width: 14em !important;
+  }
+}
 .link {
   padding: 0 1.3em 0 1.3em;
 }
 .input {
-  border: 1px solid black;
+  border: 1px solid black !important;
+  border-radius: 0 !important;
+}
+.input:focus {
+  border: 1px solid black !important;
 }
 .features {
   display: block;
@@ -95,9 +135,15 @@ a {
   background-color: #3399ff;
   transition: 0.4s;
 }
+.hide {
+  display: none !important;
+}
 @media only screen and (max-width: 475px) {
   .dashboard {
     padding: 0;
+  }
+  .hide {
+    display: block !important;
   }
   .contactus {
     min-width: 90% !important;
@@ -260,6 +306,35 @@ a {
     padding: 0.4em;
   }
 }
+@media (max-width: 475px) {
+  .padd {
+    padding: 2em 2em !important;
+  }
+  .details {
+    width: 80vw !important;
+  }
+  .see {
+    display: block !important;
+  }
+}
+@media (max-width: 320px) {
+  .padd {
+    padding: 1em 1em !important;
+  }
+  .coloring {
+    font-size: 1.4em !important;
+  }
+  .teext {
+    font-size: 0.8em !important;
+  }
+}
+@media (min-width: 768px) {
+  .details {
+    width: 35vw !important;
+    box-shadow: 2px 2px 25px rgba(153, 106, 106, 0.2);
+    border-radius: 10px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .add {
     padding-bottom: 1em;
@@ -267,4 +342,32 @@ a {
   .Signuphoto {
     display: block !important;
   }
+  .padd {
+    padding: 1.4em 2em !important;
+  }
+}
+.details input,
+select,
+textarea {
+  border: 1px solid black !important;
+}
+.disabled {
+  color: gray !important;
+}
+
+.padd {
+  height: 30vh;
+  box-shadow: 2px 2px 25px rgba(153, 106, 106, 0.2);
+  width: fit-content;
+  margin-top: 5em;
+  padding: 2em 4em;
+}
+.coloring {
+  color: var(--coloring);
+}
+.teext {
+  font-size: 1.3em;
+}
+.hover:hover {
+  border-bottom: 0 !important;
 }

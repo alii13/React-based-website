@@ -1,11 +1,11 @@
 import React from "react";
 
 function Section(props) {
-  const { image, heading, content } = props;
+  const { image, heading, content, id } = props;
   console.log(image);
   return (
     <div>
-      <div className="section">
+      <div className="section" id={id}>
         <div className="features">
           <div className="">
             <h1 className="features-heading">{heading}</h1>
@@ -18,7 +18,7 @@ function Section(props) {
               </p>
             </div>
           </div>
-          <div className="p-3 ">
+          <div className="p-3 d-flex justify-content-center see">
             <img
               src={image}
               className="img-fluid sec-image"

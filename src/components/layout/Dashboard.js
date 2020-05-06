@@ -5,12 +5,15 @@ import image2 from "../../Image2.png";
 import image3 from "../../Image3.png";
 import Section from "./Section";
 import Button from "./Button";
+import Navbar from "./Navbar";
+import { Link, animateScroll as scroll } from "react-scroll";
 //import Footer from "./Footer";
 
 function Dashboard() {
   const section1heading = "Lorem Ipsum is simply dummy text of the printing";
   return (
     <div>
+      <Navbar />
       <div className=" dashboard container-fluid ">
         <div className="row section-height">
           <div className="col-sm-12  col-md-6 place  align-self-center">
@@ -33,7 +36,18 @@ function Dashboard() {
                 <div className="row">
                   <div className="col-12 d-flex">
                     <span style={{ paddingRight: "2em" }}>
-                      <Button line={"Learn more"} />
+                      <Link
+                        activeClass="activex"
+                        to="services"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        <a href="services" className="activex">
+                          <Button line={"Learn more"} />
+                        </a>
+                      </Link>
                     </span>
                     <Button button={"2"} line={"Get a quote"} />
                   </div>
@@ -50,6 +64,7 @@ function Dashboard() {
         image={image2}
         heading={"We use the latest web technologies you can rely on"}
         content={section1heading}
+        id="services"
       />
       <Section
         image={image3}

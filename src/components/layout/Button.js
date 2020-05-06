@@ -1,7 +1,7 @@
 import React from "react";
 
 function Button(props) {
-  const { button, line } = props;
+  const { button, line, type } = props;
   let color = "";
   let borders = "none";
   if (button == "2") {
@@ -13,6 +13,7 @@ function Button(props) {
       <button
         className="btn"
         style={{ backgroundColor: color, border: borders }}
+        type={type}
       >
         {line}
       </button>
