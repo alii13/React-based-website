@@ -48,11 +48,11 @@ function OuterNavbar() {
               </NavLink>
               <Route a path="/contact-us" />
             </li>
-            <li className="nav-item  signup ">
-              <NavLink activeClassName="active" to="/signin">
+            <li className="nav-item  signup text-center">
+              <NavLink activeClassName="active" to="/signup">
                 Sign Up
               </NavLink>
-              <Route path="/signin" />
+              <Route path="/signup" />
             </li>
           </ul>
         </div>

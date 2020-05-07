@@ -55,7 +55,7 @@ function Navbar() {
               </NavLink>
               <Route a path="/contact-us" />
             </li>
-            <li className="nav-item  signup ">
+            <li className="nav-item  signup text-center ">
               <NavLink activeClassName="active" to="/signin">
                 Sign Up
               </NavLink>

@@ -19,7 +19,7 @@ export class Contact extends Component {
         <OuterNavbar />
         <div className="wrapper">
           <div className="heading p-5">
-            <h2>Got a question? send it to us</h2>
+            <h2 className="text-center">Got a question? send it to us</h2>
           </div>
           <div
             className="contactus mt-5"

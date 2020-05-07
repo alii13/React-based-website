@@ -57,7 +57,9 @@ export class Footer extends React.Component {
               </div>
             </div>
           </div>
-          <div className="copyright pt-5">Copyright (c) 2020 Novus</div>
+          <div className="copyright pt-5 " className="text-center">
+            Copyright (c) 2020 Novus
+          </div>
         </div>
       </div>
     );

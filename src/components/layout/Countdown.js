@@ -52,7 +52,7 @@ class Countdown extends React.Component {
   }
 
   render() {
-    return <div> Redirecting within {this.state.time.s} seconds </div>;
+    return <div> Redirecting to Home within {this.state.time.s} seconds </div>;
   }
 }
 export default Countdown;

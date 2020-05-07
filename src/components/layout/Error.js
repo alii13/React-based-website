@@ -28,12 +28,12 @@ class Error extends React.Component {
         <ScrollToTop />
         <OuterNavbar />
         <div className="container padd">
-          <div className="container">
+          <div className="container d-flex justify-content-center">
             <embed src={Searching} style={{ height: "5em", width: "12em" }} />
           </div>
-          <h2 className="coloring p-3"> Sorry Page Not Found!</h2>
+          <h2 className="coloring p-3 text-center"> Sorry Page Not Found!</h2>
         </div>
-        <div className="small">
+        <div className="small text-center">
           <Counter />
         </div>
       </div>

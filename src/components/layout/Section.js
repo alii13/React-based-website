@@ -8,7 +8,7 @@ function Section(props) {
       <div className="section" id={id}>
         <div className="features">
           <div className="">
-            <h1 className="features-heading">{heading}</h1>
+            <h1 className="features-heading text-center">{heading}</h1>
             <div className="info-content">
               <p className="p-2 ">
                 {content}

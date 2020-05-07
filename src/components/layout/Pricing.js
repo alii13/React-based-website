@@ -43,7 +43,7 @@ function Pricing() {
       <OuterNavbar />
       <div className="container main pb-5">
         <div className="container p-5 head">
-          <h2>
+          <h2 className="text-center">
             Choose the best plan for <br /> for your needs
           </h2>
         </div>
@@ -59,8 +59,8 @@ function Pricing() {
               </div>
 
               <div className="container pt-3">
-                <h2>Basic</h2>
-                <h3 className="pricetag">100$</h3>
+                <h2 className="text-center">Basic</h2>
+                <h3 className="pricetag text-center">100$</h3>
               </div>
               <div className="container-fluid pt-3">
                 <ul class=" text-left" style={{ display: "block" }}>
@@ -104,7 +104,7 @@ function Pricing() {
                   </ul>
                 </div>
                 <p
-                  className="text-primary pointer"
+                  className="text-primary text-center pointer"
                   data-toggle="collapse"
                   data-target="#collapseExample1"
                   aria-expanded="false"
@@ -138,8 +138,8 @@ function Pricing() {
               </div>
 
               <div className="container pt-3">
-                <h2>Professional</h2>
-                <h3 className="pricetag">200$</h3>
+                <h2 className="text-center">Professional</h2>
+                <h3 className="pricetag text-center">200$</h3>
               </div>
               <div className="container-fluid pt-3">
                 <ul class=" text-left" style={{ display: "block" }}>
@@ -183,7 +183,7 @@ function Pricing() {
                   </ul>
                 </div>
                 <p
-                  className="text-primary pointer"
+                  className="text-primary text-center pointer"
                   data-toggle="collapse"
                   data-target="#collapseExample2"
                   aria-expanded="false"
@@ -217,8 +217,8 @@ function Pricing() {
               </div>
 
               <div className="container pt-3">
-                <h2>Enterprise</h2>
-                <h3 className="pricetag">Custom</h3>
+                <h2 className="text-center">Enterprise</h2>
+                <h3 className="pricetag text-center">Custom</h3>
               </div>
               <div className="container-fluid pt-3">
                 <ul class=" text-left" style={{ display: "block" }}>
@@ -262,7 +262,7 @@ function Pricing() {
                   </ul>
                 </div>
                 <p
-                  className="text-primary pointer"
+                  className="text-primary text-center pointer"
                   data-toggle="collapse"
                   data-target="#collapseExample"
                   aria-expanded="false"

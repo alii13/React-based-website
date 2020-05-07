@@ -74,7 +74,9 @@ function Dashboard() {
         heading={"We keep up with the latest trends in UI design"}
         content={section1heading}
       />
-      <h4 className="pb-3">Lets Develop a beautiful website together !</h4>
+      <h4 className="pb-3 text-center">
+        Lets Develop a beautiful website together !
+      </h4>
 
       <NavLink className="hover" exact={true} to="/contact-us">
         <div className="d-flex justify-content-center">

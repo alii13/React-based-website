@@ -28,17 +28,17 @@ class Redirectx extends React.Component {
         <OuterNavbar />
         <div className="container padd">
           <div className="container">
-            <h2 className="coloring p-3"> Thank You !</h2>
+            <h2 className="coloring p-3 text-center"> Thank You !</h2>
           </div>
           <div className="container">
-            <p className="font-weight-light teext">
+            <p className="font-weight-light teext tex-center">
               You will recieve a call from us within 12 hours,
               <br />
               thanks for your patience
             </p>
           </div>
         </div>
-        <div className="small">
+        <div className="small text-center">
           <Counter />
         </div>
       </div>
