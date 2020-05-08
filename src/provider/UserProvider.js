@@ -1,5 +1,6 @@
 import React, { Component, createContext } from "react";
 import { auth } from "../components/auth/Firebase";
+import { generateUserDocument } from "../components/auth/Firebase";
 
 export const UserContext = createContext({ user: null });
 class UserProvider extends Component {
@@ -15,7 +16,7 @@ class UserProvider extends Component {
   };
   render() {
     return (
-      <UserContext.Provider value={this.state.user}>
+      <UserContext.Provider value={this.state}>
         {this.props.children}
       </UserContext.Provider>
     );

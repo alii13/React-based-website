@@ -2,7 +2,7 @@ import React from "react";
 
 function Section(props) {
   const { image, heading, content, id } = props;
-  console.log(image);
+
   return (
     <div>
       <div className="section" id={id}>

@@ -1,23 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image4 from "../../Image4.png";
-import InputWithIcon from "./InputwithIcon";
-import Button from "../layout/Button";
 import OuterNavbar from "../layout/OuterNavbar";
 import Footer from "../layout/Footer";
 import TextField from "@material-ui/core/TextField";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { auth } from "./Firebase";
-function SignIn() {
+import { UserContext } from "../../provider/UserProvider";
+import Loggedin from "../layout/Loggedin";
+function SignIn(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [autth, setauth] = useState(false);
+  // const data = useContext(UserContext);
+
   const signInWithEmailAndPasswordHandler = (event, email, password) => {
+    console.log(props);
     event.preventDefault();
-    console.log(email);
-    console.log(password);
     auth.signInWithEmailAndPassword(email, password).catch(error => {
       setError("Error signing in with password and email!");
       console.error("Error signing in with password and email", error);
+    });
+    console.log(auth.currentUser);
+
+    auth.onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("signin");
+        console.log(user.uid);
+        setauth(true);
+      } else {
+        console.log("no sign in bro");
+      }
     });
   };
 
@@ -25,12 +38,17 @@ function SignIn() {
     const { name, value } = event.currentTarget;
     if (name === "userEmail") {
       setEmail(value);
-      console.log(name);
     } else if (name === "userPassword") {
       setPassword(value);
     }
   };
-  return (
+  useEffect(() => {
+    console.log("re render triggered");
+  }, [autth]);
+
+  return autth ? (
+    <Loggedin />
+  ) : (
     <div>
       <OuterNavbar />
       <div className="container dabba">
@@ -53,7 +71,7 @@ function SignIn() {
               beautiful website !{" "}
             </h2>
             <form>
-              <div className="container d-flex justify-content-center">
+              <div className="container ">
                 <div className="container mine">
                   <div className="pb-2">
                     <TextField
@@ -79,17 +97,21 @@ function SignIn() {
                   </div>
                 </div>
               </div>
-              <button
-                className="bg-green-400 hover:bg-green-500 w-full py-2 text-white"
-                onClick={event => {
-                  signInWithEmailAndPasswordHandler(event, email, password);
-                }}
-              >
-                Sign in
-              </button>
 
               <div className="container d-flex justify-content-center pt-2">
-                <Button line="Sign In" />
+                <button
+                  className="btn"
+                  style={{
+                    borderRadius: "5px",
+                    padding: "5px 22px 5px 22px"
+                  }}
+                  type={"submit"}
+                  onClick={event => {
+                    signInWithEmailAndPasswordHandler(event, email, password);
+                  }}
+                >
+                  Sign In{" "}
+                </button>
               </div>
             </form>
           </div>

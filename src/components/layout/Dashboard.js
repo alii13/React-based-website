@@ -6,7 +6,7 @@ import image3 from "../../Image3.png";
 import Section from "./Section";
 import Button from "./Button";
 import Navbar from "./Navbar";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import ScrollToTop from "./ScrollToTop";
 import Footer from "./Footer";
 import { NavLink, Route } from "react-router-dom";

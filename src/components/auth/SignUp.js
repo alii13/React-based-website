@@ -1,32 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image4 from "../../Image4.png";
-import InputWithIcon from "./InputwithIcon";
-import Button from "../layout/Button";
 import OuterNavbar from "../layout/OuterNavbar";
 import Footer from "../layout/Footer";
-import InputField from "../layout/InputField";
 import TextField from "@material-ui/core/TextField";
 import { useState } from "react";
 import { auth } from "./Firebase";
 import { generateUserDocument } from "./Firebase";
+import { UserContext } from "../../provider/UserProvider";
+import { withRouter, Redirect, Link } from "react-router-dom";
 function SignUp() {
+  const { user } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [error, setError] = useState(null);
+  console.log(user);
+
   const createUserWithEmailAndPasswordHandler = async (
     event,
     email,
     password
   ) => {
     event.preventDefault();
-    console.log("data");
+
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
+
       generateUserDocument(user, { displayName });
+      console.log(user);
     } catch (error) {
       setError("Error Signing up with email and password");
     }
@@ -35,6 +39,17 @@ function SignUp() {
     setPassword("");
     setDisplayName("");
   };
+  const signOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        console.log("Sign out succesfull");
+      })
+      .catch(() => {
+        console.log("error happend");
+      });
+  };
+
   const onChangeHandler = event => {
     const { name, value } = event.currentTarget;
     if (name === "userEmail") {
@@ -45,7 +60,16 @@ function SignUp() {
       setDisplayName(value);
     }
   };
-  return (
+  return user ? (
+    <div>
+      <h3>
+        You arr already logged in <br />
+      </h3>
+      <span className="btn btn-primary">
+        <Link to="/">Back</Link>
+      </span>
+    </div>
+  ) : (
     <div>
       <OuterNavbar />
       <div className="container dabba">
@@ -92,18 +116,29 @@ function SignUp() {
                   />
                 </div>
               </div>
-              <button
-                className="bg-green-400 hover:bg-green-500 w-full py-2 text-white"
-                onClick={event => {
-                  createUserWithEmailAndPasswordHandler(event, email, password);
-                }}
-              >
-                Sign up
-              </button>
               <div className="container d-flex justify-content-center pt-2">
-                <Button line="Sign Up" type="submit" />
+                <button
+                  className="btn"
+                  style={{
+                    borderRadius: "5px",
+                    padding: "5px 22px 5px 22px"
+                  }}
+                  type={"submit"}
+                  onClick={event => {
+                    createUserWithEmailAndPasswordHandler(
+                      event,
+                      email,
+                      password
+                    );
+                  }}
+                >
+                  Sign Up{" "}
+                </button>
               </div>
             </form>
+            <button line="Sign Up" onClick={signOut}>
+              Signout
+            </button>
           </div>
         </div>
       </div>

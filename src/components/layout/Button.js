@@ -4,7 +4,7 @@ function Button(props) {
   const { button, line, type } = props;
   let color = "";
   let borders = "none";
-  if (button == "2") {
+  if (button === "2") {
     color = "white";
     borders = "1px solid black";
   }

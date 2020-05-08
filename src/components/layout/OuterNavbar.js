@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, Route } from "react-router-dom";
+import { UserContext } from "../../provider/UserProvider";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-function OuterNavbar() {
+function OuterNavbar(props) {
+  const data = useContext(UserContext);
+  let write = "";
+  let lastvariable = "";
+  /* console.log(data["user"]);
+  if (data["user"] != null || data["user"] != undefined) {
+    write = "Sign Out";
+    lastvariable = "/signout";
+  } else {
+    write = "Sign Up";
+    lastvariable = "/signup";
+  }
+  */
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -52,7 +68,7 @@ function OuterNavbar() {
               <NavLink activeClassName="active" to="/signup">
                 Sign Up
               </NavLink>
-              <Route path="/signup" />
+              <Route path={lastvariable} />
             </li>
           </ul>
         </div>

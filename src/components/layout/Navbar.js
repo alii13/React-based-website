@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Route } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
@@ -56,10 +56,10 @@ function Navbar() {
               <Route a path="/contact-us" />
             </li>
             <li className="nav-item  signup text-center ">
-              <NavLink activeClassName="active" to="/signin">
+              <NavLink activeClassName="active" to="/signup">
                 Sign Up
               </NavLink>
-              <Route path="/signin" />
+              <Route path="/signup" />
             </li>
           </ul>
         </div>
